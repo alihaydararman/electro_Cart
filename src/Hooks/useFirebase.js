@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import initializeFirebase from "../Firebase/FirebaseInitialize";
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged,signOut,signInWithEmailAndPassword,updateProfile,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -9,6 +11,7 @@ import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged,signOut,sig
 initializeFirebase()
 
 const useFirebase=()=>{
+
 
   const [error,setError]=useState('')
   const[isLoading,setIsLoadng]=useState(true)
@@ -70,6 +73,7 @@ const LogOUt=()=>{
       }).catch((error) => {
         setError(error.message)
         // An error happened.
+    
       });
 }
 
@@ -86,7 +90,7 @@ const Login=(email,password)=>{
 
 useEffect(()=>{
 
-  fetch(`https://enigmatic-escarpment-30976.herokuapp.com/user/admin/${user.email}`).then(res=>res.json()).then(data=>setIsAdmin(data.admin))
+  fetch(`http://localhost:9000/user/admin/${user.email}`).then(res=>res.json()).then(data=>setIsAdmin(data.admin))
 
 },[user.email])
  

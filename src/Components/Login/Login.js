@@ -9,15 +9,15 @@ const Login = () => {
 
 
   
-const {GoogleLogin,saveGoogleUsertoDb,setIsLoadng,LogOUt,user}=useAuth()
-console.log(useAuth);
+const {GoogleLogin,saveGoogleUsertoDb,setIsLoadng,LogOUt,user,Login}=useAuth()
+// console.log(useAuth);
 
  const [logInData,setData]=useState({})
 
  const location=useLocation()
  const history=useNavigate()
  const url=location.state?.from.pathname||"/"
- console.log(location.state?.from.pathname);
+//  console.log(location.state?.from.pathname);
 
 
  const handleGoogle=()=>{
@@ -59,6 +59,7 @@ setData(newLogindata)
 
    
   }
+
     return (
       <>
        <Container>

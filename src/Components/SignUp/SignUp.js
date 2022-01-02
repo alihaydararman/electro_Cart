@@ -1,14 +1,16 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
+import { useLocation,useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const SignUp = () => {
 
   const {register,error,setError,saveUsertoDb}=useAuth()
-
+const location =useLocation()
+const navigate=useNavigate()
  const [logInData,setData]=useState({})
-    
+ const url=location.state?.from.pathname||"/"
 
   const handleChange=e=>{
    const field= e.target.name
@@ -35,6 +37,7 @@ setData(newLogindata)
      saveUsertoDb(logInData.email,logInData.name)
 
      alert("user Created ")
+         navigate(url)
         e.preventDefault()
     }
     return (
