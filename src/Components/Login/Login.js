@@ -92,8 +92,7 @@ setData(newLogindata)
        </Container>
 
 
-        <center><Button onClick={handleGoogle}> GoogleSignIn</Button></center>
-        <center><Button onClick={LogOUt}> logout</Button></center>
+        <center><Button className='btn-danger' onClick={handleGoogle}> GoogleSignIn</Button></center>
        </>
     );
 };
