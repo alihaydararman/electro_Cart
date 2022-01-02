@@ -28,26 +28,31 @@ const ProductDetails = () => {
           <h4>{name}</h4>
 
           <Rating
+            className='text-warning d-block mb-3'
+            readonly
             initialRating={rating}
-            emptySymbol='fa fa-star-o fa-2x'
-            fullSymbol='fa fa-star fa-2x'
+            emptySymbol='far fa-star '
+            fullSymbol='fas fa-star '
           />
+          <div className='d-flex align-items-center'>
+            <span className='me-2'> Availability:</span>
+            {stock > 0 ? (
+              <button
+                className='border-0 rounded-3'
+                style={{ backgroundColor: '#c3f5d69a', color: '#09a043' }}
+              >
+                In stock
+              </button>
+            ) : (
+              <button
+                className='border-0 rounded-3 text-danger'
+                style={{ backgroundColor: '#f7c1c18f' }}
+              >
+                out of stock
+              </button>
+            )}
+          </div>
 
-          {stock > 0 ? (
-            <button
-              className='border-0 rounded-3'
-              style={{ backgroundColor: '#c3f5d69a', color: '#09a043' }}
-            >
-              In stock
-            </button>
-          ) : (
-            <button
-              className='border-0 rounded-3 text-danger'
-              style={{ backgroundColor: '#f7c1c18f' }}
-            >
-              out of stock
-            </button>
-          )}
           <h4 className='mt-3'>Price: ${price}</h4>
           {/* <div className='d-flex align-items-center'>
             <button
@@ -96,6 +101,10 @@ const ProductDetails = () => {
             <div className='d-flex align-items-center text-muted mb-3'>
               <i className='fas fa-leaf me-4'></i>
               <span>100% genuine products</span>
+            </div>
+            <div className='d-flex align-items-center text-muted mb-3'>
+              <i class='fas fa-file-import  me-4'></i>
+              <span>Imported products from populer brand</span>
             </div>
           </div>
         </div>
