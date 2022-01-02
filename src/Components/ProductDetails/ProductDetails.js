@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
-import { useParams } from 'react-router-dom';
 import {  useDispatch } from 'react-redux';
 import {addToCart} from '../../redux/actions/cartAction'
 
