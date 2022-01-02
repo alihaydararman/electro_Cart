@@ -9,7 +9,7 @@ import Slider from '../Slider/Slider';
 
 const Home = () => {
     return (
-        <div className='container'>
+        <div className=''>
             <Header></Header>
             <Slider></Slider>
             <Banner></Banner>

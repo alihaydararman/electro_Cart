@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
     
       <Routes>
-       <Route path='productsdetails' element={<ProductDetails />} />
+       <Route path='products/:id' element={<ProductDetails />} />
         <Route path='product/checkout' element={<Checkout/>}></Route>
         {/* <Route path="/" element={<Name></Name>}/> */}
       <Route path="/login" element={<Login />} />

@@ -3,7 +3,7 @@
   }
   
   .pbody {
-    background: rgb(250, 206, 240);
+    background: #F9FAFB;
     padding-top: 10px;
     margin-top: 10px;
   }
@@ -12,10 +12,10 @@
     background: #222;
     border: 1px solid #dd2476;
     color: rgba(250, 250, 250, 0.8);
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
   }
   
-  .btn {
+  /* .btn {
     border: 5px solid;
     border-image-slice: 1;
     background: var(--gradient) !important;
@@ -33,18 +33,18 @@
     border: 5px solid #fff !important; 
     box-shadow: #222 1px 0 10px;
     text-decoration: underline;
-  }
+  } */
 
 
 
-  .product-container{
+  /* .product-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-}
+} */
 
 /* Make it responsive */
-@media only screen and (max-width:688px) {
+/* @media only screen and (max-width:688px) {
   .product-container{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -53,4 +53,4 @@
   .product-container{
         grid-template-columns: repeat(2, 1fr);
     }
-}
+} */
