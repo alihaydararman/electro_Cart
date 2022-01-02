@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
 import { useParams } from 'react-router-dom';
+import {  useDispatch } from 'react-redux';
+import {addToCart} from '../../redux/actions/cartAction'
 
 const ProductDetails = () => {
+  let [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+
   // const { id } = useParams();
   const [product, setProduct] = useState({});
 
@@ -16,6 +21,7 @@ const ProductDetails = () => {
   const { name, img, stock, price, rating, description } = product;
 
     const addToCartHandler = () => {
+    dispatch(addToCart(product._id, quantity));
       
     };
   return (
