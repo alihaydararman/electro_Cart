@@ -7,7 +7,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/61d08f7a67a08a591cb7556d`)
+    fetch(`http://localhost:9000/products/61d08f7a67a08a591cb7556d`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
@@ -54,22 +54,6 @@ const ProductDetails = () => {
           </div>
 
           <h4 className='mt-3'>Price: ${price}</h4>
-          {/* <div className='d-flex align-items-center'>
-            <button
-              className='update me-4'
-              onClick={() => setQuantity(decrease)}
-            >
-              <i className='fas fa-minus'></i>
-            </button>
-            <span className='fs-4'>{quantity}</span>
-            <button
-              className='update ms-4'
-              onClick={() => setQuantity(increase)}
-            >
-              <i className='fas fa-plus '></i>
-            </button>
-            <h4 className='ms-5'> ${product.price * quantity}</h4>
-          </div> */}
 
           <p className='text-muted mt-4'>{description}</p>
           <button className='btn btn-warning' onClick={addToCartHandler}>
@@ -103,7 +87,7 @@ const ProductDetails = () => {
               <span>100% genuine products</span>
             </div>
             <div className='d-flex align-items-center text-muted mb-3'>
-              <i class='fas fa-file-import  me-4'></i>
+              <i className='fas fa-file-import  me-4'></i>
               <span>Imported products from populer brand</span>
             </div>
           </div>
