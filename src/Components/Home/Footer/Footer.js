@@ -98,7 +98,7 @@ const Footer = () => {
       </div>
       <div className="text-center fot">
         <span>
-          &copy; Copyright 2021| Designed
+          &copy; Copyright 2022| Designed
           by Ali Haydar
         </span>
       </div>

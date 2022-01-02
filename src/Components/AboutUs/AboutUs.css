@@ -1,6 +1,7 @@
 
 .aboutus-section {
     padding: 90px 0;
+    
 }
 .aboutus-title {
     font-size: 30px;
@@ -10,7 +11,7 @@
     padding: 0 0 11px;
     position: relative;
     text-transform: uppercase;
-    color: rgb(5, 5, 5);
+    color: #000;
 }
 .aboutus-title::after {
     background: #fdb801 none repeat scroll 0 0;
@@ -22,7 +23,7 @@
     width: 54px;
 }
 .aboutus-text {
-    color: rgb(8, 8, 8);
+    color: #606060;
     font-size: 13px;
     line-height: 22px;
     margin: 0 0 35px;
@@ -61,7 +62,7 @@ a:hover, a:active {
 }
 
 .feature .feature-box .feature-content h4 {
-    color: white;
+    color: #0f0f0f;
     font-size: 18px;
     letter-spacing: 0;
     line-height: 22px;

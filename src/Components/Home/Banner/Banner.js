@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const watch = [
+const electro = [
     {
         id: 1,
         style: "To make what we make.",
@@ -24,7 +24,7 @@ const Banner = () => {
     return (
         <div className="container banner-footer-container">
             <div className="row">
-                {watch.map((wt) => {
+                {electro.map((wt) => {
                     return (
                         <div key={wt.id} className="col-lg-4">
                             <div
