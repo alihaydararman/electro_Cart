@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap';
 
 const Slider = () => {
     return (
-        <div className='pt-4'>
+        <div className=''>
             <Carousel>
                 <Carousel.Item>
                     <img
@@ -13,7 +13,7 @@ const Slider = () => {
                         style={{ height: '400px' }}
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
+                        <h1 className='text-dar'>First slide label</h1>
                         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
