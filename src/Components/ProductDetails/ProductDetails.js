@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
 import {  useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import {addToCart} from '../../redux/actions/cartAction'
 
 const ProductDetails = () => {
@@ -8,13 +9,15 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
 
   // const { id } = useParams();
+  const { id } = useParams();
+  console.log(id)
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:9000/products/61d08f7a67a08a591cb7556d`)
+    fetch(`http://localhost:9000/products/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
-  }, []);
+  }, [id]);
   console.log(product);
 
   const { name, img, stock, price, rating, description } = product;
