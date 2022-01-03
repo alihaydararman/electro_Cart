@@ -8,10 +8,11 @@ const MyOrders = () => {
   const [success, setSuccess] = useState();
 
   const [orders, setOrders] = useState([]);
+ 
 
   useEffect(() => {
     fetch(
-      `https://rocky-shore-10312.herokuapp.com/myorders?email=${user.email}`
+      `http://localhost:9000/order/${user.email}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -19,10 +20,10 @@ const MyOrders = () => {
       });
   }, [user]);
   const removeOrderHandler = (id) => {
-    console.log(id);
+    
     const proceed = window.confirm('Are you sure you want to delete?');
     if (proceed === true) {
-      const url = `https://rocky-shore-10312.herokuapp.com/orders/${id}`;
+      const url = `http://localhost:9000/order/${id}`;
       fetch(url, {
         method: 'DELETE',
       })

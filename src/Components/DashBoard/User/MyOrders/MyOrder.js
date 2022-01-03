@@ -14,7 +14,7 @@ const MyOrder = ({ order, quantity, removeOrderHandler }) => {
               className='border-0 bg-transparent ms-3'
               onClick={() => removeOrderHandler(order._id)}
             >
-              {' '}
+              {' delete'}
               <i className='fas fa-trash text-danger fs-4'></i>
             </button>
           </div>

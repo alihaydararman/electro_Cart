@@ -10,7 +10,7 @@ const AddService = () => {
   const { register, handleSubmit, reset } = useForm();
   const [success, setSuccess] = useState();
   const onSubmit = (data) => {
-    fetch('https://rocky-shore-10312.herokuapp.com/products', {
+    fetch('http://localhost:9000/products', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

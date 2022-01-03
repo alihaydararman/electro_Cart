@@ -13,6 +13,7 @@ import ManageOrder from './Components/DashBoard/Admin/ManageOrders/ManageOrder';
 import MyOrders from './Components/DashBoard/User/MyOrders/MyOrders';
 import ManageOrders from './Components/DashBoard/Admin/ManageOrders/ManageOrders';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
+import AddReview from './Components/DashBoard/Dashboard/AddReview/AddReview';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
               <Route path='addproduct' element={<AddProduct />}></Route>
               <Route path='manageorders' element={<ManageOrders/>}></Route>
               <Route path='myorders' element={<MyOrders/>}></Route>
+              <Route path='addreview' element={<AddReview/>}></Route>
             </Route>
       </Routes>
       </BrowserRouter>

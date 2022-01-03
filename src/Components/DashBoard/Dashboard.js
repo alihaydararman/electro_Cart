@@ -9,7 +9,7 @@ import './Dashboard.css';
 const Dashboard = () => {
   const [menustate, setMenuState] = useState(false);
   const { user,LogOUt, admin } = useAuth();
-  console.log(admin);
+
   const navigate = useNavigate();
 //   const signOut = () => {
 //     logout(navigate);
@@ -73,7 +73,7 @@ const Dashboard = () => {
                   My order
                 </NavLink>
                 <NavLink
-                  to='/dashboard/review'
+                  to='/dashboard/addreview'
                   className={({ isActive }) =>
                     isActive ? 'active-dash mt-3' : 'mt-3  text-secondary'
                   }

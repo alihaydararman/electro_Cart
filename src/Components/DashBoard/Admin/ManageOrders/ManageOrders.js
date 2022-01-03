@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const [success, setSuccess] = useState();
 
   useEffect(() => {
-    fetch(`https://rocky-shore-10312.herokuapp.com/orders`)
+    fetch(`http://localhost:9000/orders`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -15,10 +15,10 @@ const ManageOrders = () => {
   }, []);
 
   const removeOrderHandler = (id) => {
-    console.log(id);
+    
     const proceed = window.confirm('Are you sure you want to delete?');
     if (proceed === true) {
-      const url = `https://rocky-shore-10312.herokuapp.com/orders/${id}`;
+      const url = `http://localhost:9000/orders/${id}`;
       fetch(url, {
         method: 'DELETE',
       })
