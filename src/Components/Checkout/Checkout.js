@@ -98,9 +98,11 @@ const Checkout = () => {
         <div className='col-12 col-md-5 mt-5 mt-md-0 ps-md-4 p-0'>
           <div className=' bg-white box-shadow rounded-3 p-4 py-5'>
             <h4>Order summary</h4>
-            <hr className='mb-4' />
-            <p>Total: {getCartCount()} items</p>
+            <hr className='mb-3' />
+            <h6 className='text-dark'>Total: {getCartCount()} items</h6>
             <h6>Price: ${getCartTotal()}</h6>
+            <h6>Tax: ${getCartTotal() * 0.1}</h6>
+            <h6>Total price: ${getCartTotal() + getCartTotal() * 0.1}</h6>
           </div>
         </div>
       </div>

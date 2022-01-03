@@ -8,7 +8,6 @@ const ProductDetails = () => {
   let [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
-  // const { id } = useParams();
   const { id } = useParams();
   console.log(id)
   const [product, setProduct] = useState({});

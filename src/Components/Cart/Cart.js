@@ -5,26 +5,23 @@ import { addToCart, removeFromCart } from '../../redux/actions/cartAction';
 import CartItem from './CartItem';
 
 const Cart = () => {
-    const cart = useSelector((state) => state.cart);
-    const { cartItems } = cart;
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
 
-    const dispatch = useDispatch();
-    const qtyChangeHandler = (id, qty) => {
-      dispatch(addToCart(id, qty));
-    };
-    const removeCartHanler = (id) => {
-      dispatch(removeFromCart(id));
-    };
+  const dispatch = useDispatch();
+  const qtyChangeHandler = (id, qty) => {
+    dispatch(addToCart(id, qty));
+  };
+  const removeCartHanler = (id) => {
+    dispatch(removeFromCart(id));
+  };
 
-    const getCartTotal = () => {
-      return cartItems.reduce(
-        (price, item) => item.price * item.qty + price,
-        0
-      );
-    };
-    const getCartCount = () => {
-      return cartItems.reduce((qty, item) => qty + Number(item.qty), 0);
-    };
+  const getCartTotal = () => {
+    return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
+  };
+  const getCartCount = () => {
+    return cartItems.reduce((qty, item) => qty + Number(item.qty), 0);
+  };
   return (
     <div>
       <div className='container  my-5'>
@@ -53,7 +50,9 @@ const Cart = () => {
           <div className='col-12 col-md-4 mt-5 mt-md-0 ps-md-4'>
             <div className=' bg-white box-shadow rounded-3 p-4 py-5'>
               <h5>Total: {getCartCount()} items</h5>
-              <h6>Price: ${getCartTotal()}</h6>
+              <h6>Subtotal price: ${getCartTotal()}</h6>
+              <h6>Tax: ${getCartTotal() * 0.1}</h6>
+              <h6>Total price: ${getCartTotal() + getCartTotal() * 0.1}</h6>
               <hr />
               <Link
                 to={`/product/checkout`}

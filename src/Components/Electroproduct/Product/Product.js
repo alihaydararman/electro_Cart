@@ -1,10 +1,17 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../../redux/actions/cartAction';
 
 const Product = ({ product }) => {
     const { name, _id, img, stock, price } = product;
-    console.log(product)
+  const dispatch = useDispatch();
+  
+  
+   const addToCartHandler = () => {
+      dispatch(addToCart(product._id, 1));
+      };
   return (
     <div className=''>
       <Card className='card h-100'>
@@ -25,9 +32,9 @@ const Product = ({ product }) => {
             >
               <i className='fas fa-link'></i> Details
             </Link>
-            <button className='btn btn-warning'>
+            <button className='btn btn-warning' onClick={addToCartHandler}>
               {' '}
-              <i className='fa fa-shopping-cart'></i>Add Card
+              <i className='fa fa-shopping-cart me-2'></i>Add Card
             </button>
           </Card.Footer>
         </div>
