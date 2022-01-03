@@ -19,6 +19,7 @@ const MyOrders = () => {
         setOrders(data);
       });
   }, [user]);
+  console.log(orders)
   const removeOrderHandler = (id) => {
     
     const proceed = window.confirm('Are you sure you want to delete?');

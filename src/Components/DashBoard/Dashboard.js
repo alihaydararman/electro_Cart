@@ -45,7 +45,7 @@ const Dashboard = () => {
           <div className='d-flex flex-column px-2 position-relative'>
             <CloseButton
               onClick={() => setMenuState(false)}
-              className=' position-absolute top-0 end-0 m-3 p-2  close-btn'
+              className=' position-absolute top-0 end-0 m-3 p-2 bg-white close-btn'
             />
             <Link to='/home' className='mt-5 text-secondary'>
               <span>
@@ -89,18 +89,7 @@ const Dashboard = () => {
 
             {admin && (
               <>
-                {/* <NavLink
-                  to='/dashboard/orders'
-                  className={({ isActive }) =>
-                    isActive ? 'active-dash mt-3' : 'mt-3  text-secondary'
-                  }
-                >
-                  {' '}
-                  <span>
-                    <i className='fas fa-tasks me-2'></i>
-                  </span>
-                  Order list
-                </NavLink> */}
+          
                 <NavLink
                   to='/dashboard/addproduct'
                   className={({ isActive }) =>

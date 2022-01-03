@@ -15,7 +15,7 @@ const ManageOrder = ({ order, quantity, removeOrderHandler }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
-          setStatus('shifted');
+          setStatus('shipped');
         }
       });
   };

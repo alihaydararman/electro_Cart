@@ -8,13 +8,12 @@ const MyOrder = ({ order, quantity, removeOrderHandler }) => {
        
         <div className='add-product box-shadow bg-white p-4 '>
           <div className='d-flex justify-content-between align-items-center mb-3'>
-            <p className='mb-3 '>Order: {quantity + 1}</p>
-            <p>status: {order.status}</p>
+            <p className='mb-3 text-dark'>Order: {quantity + 1}</p>
+            <p className='text-dark'>status: {order.status}</p>
             <button
               className='border-0 bg-transparent ms-3'
               onClick={() => removeOrderHandler(order._id)}
             >
-              {' delete'}
               <i className='fas fa-trash text-danger fs-4'></i>
             </button>
           </div>
