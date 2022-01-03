@@ -32,9 +32,9 @@ const Footer = () => {
                 <br />
                 <span>Feni,Chittagong, Bangladesh</span>
                 <h6> Phone Number </h6>
-                <span> 01854046599</span>
+                <span> 01854*****</span>
                 <br />
-                <span> 01306749717</span>
+                <span> 0130******</span>
                 <h6>Email Address</h6>
                 <span>ali3@dti.ac</span>
               </div>
@@ -98,8 +98,7 @@ const Footer = () => {
       </div>
       <div className="text-center fot">
         <span>
-          &copy; Copyright 2022| Designed
-          by Ali Haydar
+          &copy; Copyright 2022| Developed by team 42
         </span>
       </div>
     </div>

@@ -66,14 +66,7 @@ const AddService = () => {
                 <input required placeholder='Image Url' {...register('img')} />
               </div>
               <div className='w-100 '>
-                <label htmlFor='category' className='mb-2'>
-                  Category
-                </label>
-                <input
-                  required
-                  placeholder='Category name'
-                  {...register('category')}
-                />
+               
               </div>
               <div className='w-100 '>
                 <label htmlFor='image' className='mb-2'>
@@ -82,7 +75,7 @@ const AddService = () => {
                 <input
                   required
                   placeholder='Product quantity'
-                  {...register('countStock')}
+                  {...register('stock')}
                 />
               </div>
 
@@ -100,7 +93,7 @@ const AddService = () => {
             </div>
             <button
               type='submit'
-              className='btn-store'
+              className='btn btn-warning'
               style={{ marginLeft: `calc(100% - 115px)` }}
             >
               Submit

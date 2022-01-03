@@ -9,7 +9,7 @@ const AdminRoute = (props) => {
     const location = useLocation();
     const {children,...rest}=props
     const {user,admin}=useAuth()
-
+    console.log(admin);
     if(user.email && admin){
         return children;
     }

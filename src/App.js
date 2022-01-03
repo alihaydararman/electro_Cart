@@ -13,7 +13,7 @@ import {BrowserRouter, Routes, Route,} from "react-router-dom";
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import AuthProvider from './Contexts/AuthProvider';
-import Dashboard from './Components/DashBoard/Dashboard/Dashboard';
+import Dashboard from './Components/DashBoard/Dashboard';
 import DashboardHome from './Components/DashBoard/DashboardHome/DashboardHome';
 import MakeAdmin from './Components/DashBoard/Admin/MakeAdmin/MakeAdmin';
 import AddProduct from './Components/DashBoard/AddProduct/AddProduct'

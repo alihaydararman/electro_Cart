@@ -41,7 +41,7 @@ const Contact = () => {
                     <div className='address text-left'>
                       {' '}
                       <span>Phone</span>
-                      <p>+8801854046599</p>
+                      <p>+880185******</p>
                     </div>
                   </div>
                   <div className='d-flex flex-row align-items-center mt-3'>
@@ -52,7 +52,7 @@ const Contact = () => {
                     <div className='address text-left'>
                       {' '}
                       <span>Email</span>
-                      <p>alihaydar6599@gmail.com</p>
+                      <p>abcd@gmail.com</p>
                     </div>
                   </div>
                 </div>
