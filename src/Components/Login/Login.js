@@ -9,15 +9,15 @@ const Login = () => {
 
 
   
-const {GoogleLogin,saveGoogleUsertoDb,setIsLoadng,LogOUt,user}=useAuth()
-console.log(useAuth);
+const {GoogleLogin,saveGoogleUsertoDb,setIsLoadng,LogOUt,user,Login}=useAuth()
+
 
  const [logInData,setData]=useState({})
 
  const location=useLocation()
  const history=useNavigate()
  const url=location.state?.from.pathname||"/"
- console.log(location.state?.from.pathname);
+
 
 
  const handleGoogle=()=>{
@@ -44,7 +44,7 @@ setData(newLogindata)
             
             const user = userCredential.user;
             history(url)
-            console.log(user);
+            
             // ...
           })
           .catch((error) => {
@@ -59,6 +59,7 @@ setData(newLogindata)
 
    
   }
+
     return (
       <>
        <Container>
