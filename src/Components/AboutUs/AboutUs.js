@@ -5,7 +5,7 @@ import './AboutUs.css'
 
 const AboutUs = () => {
     return (
-        <div>
+        <div className='container'>
             <Header></Header>
             <div className="aboutus-section">
                 <div className="container">
@@ -23,7 +23,7 @@ const AboutUs = () => {
                                 <img src="" alt="" />
                             </div>
                         </div>
-                        <div className="col-md-5 col-sm-6 col-xs-12">
+                        <div className="col-md-5 col-sm-6 col-xs-12 bfeatures">
                             <div className="feature">
                                 <div className="feature-box">
                                     <div className="clearfix">

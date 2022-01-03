@@ -22,6 +22,8 @@ import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import AddReview from './Components/DashBoard/Dashboard/AddReview/AddReview';
 import AdminRoute from './Components/Login/AdminRoute/AdminRoute';
 
+import OfferProducts from './Components/OfferProduct/OfferProducts/OfferProducts';
+
 function App() {
   return (
     <AuthProvider>
@@ -30,6 +32,7 @@ function App() {
         <Routes>
           <Route path='product/checkout' element={<Checkout />}></Route>
           <Route path='cart' element={<Cart />}></Route>
+     
           <Route path='products/:id' element={<ProductDetails />} />
           <Route path='product/checkout' element={<Checkout />}></Route>
           {/* <Route path="/" element={<Name></Name>}/> */}
@@ -55,7 +58,10 @@ function App() {
               <Route path='myorders' element={<MyOrders/>}></Route>
               <Route path='addreview' element={<AddReview/>}></Route>
             </Route>
-      </Routes>
+ 
+          <Route path='/aboutus' element={<AboutUs />} />
+          <Route path='/offerproducts' element={<OfferProducts />} />
+        </Routes>
       </BrowserRouter>
     </AuthProvider>
   );
