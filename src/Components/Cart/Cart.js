@@ -2,6 +2,8 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart } from '../../redux/actions/cartAction';
+import Footer from '../Home/Footer/Footer';
+import Header from '../Shared/Header/Header';
 import CartItem from './CartItem';
 
 const Cart = () => {
@@ -24,6 +26,7 @@ const Cart = () => {
   };
   return (
     <div>
+      <Header/>
       <div className='container  my-5'>
         <div className='row'>
           <div className='col-12 col-md-8 box-shadow p-lg-3  '>
@@ -64,6 +67,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -2,7 +2,6 @@
   padding: 60px 0;
   margin-top: 50px;
   background-color: rgb(26, 18, 18);
-  color: rgb(107, 167, 167);
 }
 
 .main-container h5 {
@@ -35,10 +34,11 @@
   display: inline-block;
   margin-top: 10px;
   text-decoration: none;
+  color:#6c757d;
 }
 
 .footer-container li a:hover {
-  color: rgb(168, 168, 219);
+  color: rgb(255, 255, 255);
   text-decoration: underline;
 }
 

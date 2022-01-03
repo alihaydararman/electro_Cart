@@ -1,4 +1,4 @@
-.wrapper {
+.contact-wrapper {
     background: #000;
     background: url("https://i.ibb.co/52WPmqs/b3.png");
     background-size: cover;
@@ -6,7 +6,7 @@
 
 .overlay {
     width: 100%;
-    background: rgba(0, 0, 0, 0.8)
+    background: rgba(0, 0, 0, 0.829)
 }
 
 .contact-us h3,

@@ -4,7 +4,7 @@ import './Contact.css';
 const Contact = () => {
   return (
     <div>
-      <div className='wrapper'>
+      <div className='contact-wrapper'>
         <div className='overlay '>
           <div className='container  py-5'>
             <div className='row  d-flex  justify-content-center'>

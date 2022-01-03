@@ -23,16 +23,18 @@ import AddReview from './Components/DashBoard/Dashboard/AddReview/AddReview';
 import AdminRoute from './Components/Login/AdminRoute/AdminRoute';
 
 import OfferProducts from './Components/OfferProduct/OfferProducts/OfferProducts';
+import NotFound from './Components/NotFound/NotFound';
+import Shop from './Components/Shop/Shop';
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-      
         <Routes>
           <Route path='product/checkout' element={<Checkout />}></Route>
           <Route path='cart' element={<Cart />}></Route>
-     
+          <Route path='shop' element={<Shop/>}></Route>
+
           <Route path='products/:id' element={<ProductDetails />} />
           <Route path='product/checkout' element={<Checkout />}></Route>
           {/* <Route path="/" element={<Name></Name>}/> */}
@@ -41,26 +43,51 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/' element={<Home />} />
           <Route path='/aboutus' element={<AboutUs />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route
-              path='dashboard'
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route
+            path='dashboard'
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          >
+            <Route path={'/dashboard'} element={<DashboardHome />}></Route>
+            <Route
+              path='makeadmin'
               element={
-                <PrivateRoute>
-                  <Dashboard />
-                </PrivateRoute>
+                <AdminRoute>
+                  {' '}
+                  <MakeAdmin />{' '}
+                </AdminRoute>
               }
-            >
-              <Route path={'/dashboard'} element={<DashboardHome />}></Route>
-              <Route path='makeadmin' element={<AdminRoute> <MakeAdmin/> </AdminRoute>}></Route>
-              <Route path='addproduct' element={<AdminRoute> <AddProduct/> </AdminRoute>}></Route>
-              <Route path='manageorders' element={<AdminRoute> <ManageOrders/> </AdminRoute>}></Route>
-              <Route path='myorders' element={<MyOrders/>}></Route>
-              <Route path='addreview' element={<AddReview/>}></Route>
-            </Route>
- 
+            ></Route>
+            <Route
+              path='addproduct'
+              element={
+                <AdminRoute>
+                  {' '}
+                  <AddProduct />{' '}
+                </AdminRoute>
+              }
+            ></Route>
+            <Route
+              path='manageorders'
+              element={
+                <AdminRoute>
+                  {' '}
+                  <ManageOrders />{' '}
+                </AdminRoute>
+              }
+            ></Route>
+            <Route path='myorders' element={<MyOrders />}></Route>
+            <Route path='addreview' element={<AddReview />}></Route>
+          </Route>
+
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/offerproducts' element={<OfferProducts />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

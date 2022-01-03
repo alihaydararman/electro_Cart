@@ -1,7 +1,7 @@
 
 .aboutus-section {
     padding: 40px 10px;
-    background-color: rgb(180, 146, 180);
+    background-color: #F9FAFB;
    
 }
 .aboutus-title {
@@ -62,14 +62,8 @@ a:hover, a:active {
     width: 1px;
 }
 .bfeatures{
-    background-image: url('https://www.pim.com.pk/wp-content/uploads/2019/01/4a36574b-7c3e-4f9a-ad27-3dd5739804be_TPM_Social_680x357_08142019l_extra_large.jpeg');
-}
-.feature .feature-box .feature-content h4 {
-    color: #0f0f0f;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: 22px;
-    margin: 0 0 5px;
+    /* background-image: url('https://www.pim.com.pk/wp-content/uploads/2019/01/4a36574b-7c3e-4f9a-ad27-3dd5739804be_TPM_Social_680x357_08142019l_extra_large.jpeg'); */
+    background-color: rgba(17, 16, 16, 0.836);
 }
 
 
@@ -79,7 +73,7 @@ a:hover, a:active {
     width: 78%;
 }
 .feature .feature-box .feature-content h4 {
-    color: #0f0f0f;
+    color: #FFC118;
     font-size: 18px;
     letter-spacing: 0;
     line-height: 22px;
