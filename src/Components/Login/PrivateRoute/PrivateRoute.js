@@ -7,9 +7,6 @@ const PrivateRoute = ({ children }) => {
   const { user, isLoading } = useAuth();
   const location = useLocation();
   console.log(user)
-   if (!user.email) {
-     return <Navigate to='/login' state={{ from: location }} />;
-   }
   if (isLoading) {
     return (
       <div className='text-center'>
@@ -19,7 +16,9 @@ const PrivateRoute = ({ children }) => {
       </div>
     );
   }
- 
+  if (!user.email) {
+    return <Navigate to='/login' state={{ from: location }} />;
+  }
 
   return children;
 };
