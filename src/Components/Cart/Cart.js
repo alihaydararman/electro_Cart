@@ -32,7 +32,7 @@ const Cart = () => {
           <div className='col-12 col-md-8 box-shadow p-lg-3  '>
             {getCartCount() === 0 ? (
               <div className='p-4 d-flex align-items-center'>
-                <p className=' m-0 '>Your cart is empty</p>{' '}
+                <p className=' m-0 text-dark'>Your cart is empty</p>{' '}
                 <Link to='/' className='text-warning ms-3 p-0'>
                   <i className='fas fa-home me-1'></i>
                   Go home

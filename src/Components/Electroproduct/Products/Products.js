@@ -16,7 +16,7 @@ const Products = () => {
         <h2 className='heading-main'>Popular Products</h2>
         <Row sm={1} md={2} lg={3} className='g-4 mt-4'>
           {products.slice(0, 6).map((product) => (
-            <Product key={product.id} product={product}></Product>
+            <Product key={product._id} product={product}></Product>
           ))}
         </Row>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form, Button, Alert } from 'react-bootstrap';
+import {  Form, Button, Alert } from 'react-bootstrap';
 import useAuth from '../../../../Hooks/useAuth';
 
 const AddReview = () => {
@@ -17,10 +17,11 @@ const AddReview = () => {
 
   const handleRating = (e) => {
     const userdata = { name: `${user.displayName}`, email: `${user.email}` };
-
+ 
     const ratingInfo = ratingData;
     ratingInfo.users = userdata;
-
+    ratingInfo.img = ratingInfo.img ? ratingInfo.img : user.photoURL;
+    console.log(ratingInfo);
     fetch('http://localhost:9000/reviews', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
@@ -62,6 +63,15 @@ const AddReview = () => {
               />
             </Form.Group>
             <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+              <Form.Label>Image Link</Form.Label>
+              <Form.Control
+                onChange={handleChange}
+                name='img'
+                type='url'
+                placeholder='Your image url'
+              />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
               <Form.Label>Star's</Form.Label>
               <Form.Control
                 onChange={handleChange}
@@ -70,7 +80,7 @@ const AddReview = () => {
                 placeholder='Rate Out of 5'
                 min='1'
                 max='5'
-                step='0.01'
+                step='0.1'
                 required
               />
             </Form.Group>

@@ -4,7 +4,7 @@ import Rating from 'react-rating';
 import "./Review.css"
 
 const SignleReview = ({review}) => {
-
+console.log(review)
     return (
         <div div className='m-5'>
              

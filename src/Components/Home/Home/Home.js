@@ -1,4 +1,5 @@
 import React from 'react';
+import Review from '../../DashBoard/Dashboard/Review/Review';
 import Products from '../../Electroproduct/Products/Products';
 import Header from '../../Shared/Header/Header';
 import Banner from '../Banner/Banner';
@@ -14,6 +15,7 @@ const Home = () => {
             <Slider></Slider>
             <Banner></Banner>
             <Products></Products>
+            <Review/>
             <Contact></Contact>
             <Footer></Footer>
         </div>
