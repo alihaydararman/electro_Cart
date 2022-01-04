@@ -50,7 +50,7 @@ const MakeAdmin = () => {
                 />
               </div>
             </div>
-            <button type='submit' className='btn-store'>
+            <button type='submit' className='btn btn-warning'>
               Submit
             </button>
           </form>

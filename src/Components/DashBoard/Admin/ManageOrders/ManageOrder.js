@@ -26,7 +26,7 @@ const ManageOrder = ({ order, quantity, removeOrderHandler }) => {
           <div className='d-flex justify-content-between align-items-center mb-3'>
             <h5 className='mb-3 '>Order: {quantity + 1}</h5>
 
-            <p>{status}</p>
+            <p className='text-dark'>{status}</p>
             <div className=''>
               <button
                 className='border-0 bg-transparent ms-3'
