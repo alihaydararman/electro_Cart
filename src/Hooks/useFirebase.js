@@ -79,7 +79,9 @@ const useFirebase = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:9000/user/admin/${user.email}`)
+    fetch(
+      `https://intense-plateau-36885.herokuapp.com/user/admin/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setIsAdmin(data.admin));
   }, [user.email]);
@@ -106,7 +108,7 @@ const useFirebase = () => {
   const saveUsertoDb = (email, displayName) => {
     const user = { email, displayName };
 
-    fetch('http://localhost:9000/users', {
+    fetch('https://intense-plateau-36885.herokuapp.com/users', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(user),
@@ -115,7 +117,7 @@ const useFirebase = () => {
   const saveGoogleUsertoDb = (email, displayName) => {
     const user = { email, displayName };
 
-    fetch('http://localhost:9000/users', {
+    fetch('https://intense-plateau-36885.herokuapp.com/users', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(user),

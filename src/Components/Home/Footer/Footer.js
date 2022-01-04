@@ -27,15 +27,15 @@ const Footer = () => {
             <div className='col-lg-3'>
               <div className='m-2 footer-container text-muted'>
                 <h5>CONTACT INFO</h5>
-                <h6 className="text-white"> Address </h6>
+                <h6 className='text-white'> Address </h6>
                 <span>Feni Dell Center</span>
                 <br />
                 <span>Feni,Chittagong, Bangladesh</span>
-                <h6 className="text-white"> Phone Number </h6>
+                <h6 className='text-white'> Phone Number </h6>
                 <span> 01854*****</span>
                 <br />
                 <span> 0130******</span>
-                <h6 className="text-white">Email Address</h6>
+                <h6 className='text-white'>Email Address</h6>
                 <span>ali3@dti.ac</span>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => {
                   </li>
                 </ul>
                 <h5 className='mb-4'>MAILING LIST</h5>
-                <span className="text-muted me-2">
+                <span className='text-muted me-2'>
                   Sign up for our mailing ist to get updates and offers
                 </span>
                 <input
@@ -97,7 +97,9 @@ const Footer = () => {
         </div>
       </div>
       <div className='text-center fot'>
-        <span>&copy; Copyright 2022| Developed by team 42</span>
+        <p className="text-muted">
+          &copy; Copyright 2022| Developed by <span className="fs-5 text-warning"> Team 42</span>
+        </p>
       </div>
     </div>
   );

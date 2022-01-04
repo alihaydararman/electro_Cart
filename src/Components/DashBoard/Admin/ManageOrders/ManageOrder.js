@@ -5,7 +5,7 @@ const ManageOrder = ({ order, quantity, removeOrderHandler }) => {
   const [status, setStatus] = useState(order.status);
 
   const updateStatus = (id) => {
-    fetch(`http://localhost:9000/orders/${id}`, {
+    fetch(`https://intense-plateau-36885.herokuapp.com/orders/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

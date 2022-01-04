@@ -10,7 +10,7 @@ const MakeAdmin = () => {
   const onSubmit = (data) => {
     const email = data.email;
     const user = { email };
-    fetch('http://localhost:9000/users', {
+    fetch('https://intense-plateau-36885.herokuapp.com/users', {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

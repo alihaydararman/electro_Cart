@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
   const { data } = await axios.get(
-    `http://localhost:9000/products/${id}`
+    `https://intense-plateau-36885.herokuapp.com/products/${id}`
   );
   dispatch({
     type: actionTypes.ADD_TO_CART,
@@ -13,7 +13,7 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
       img: data.img,
       price: data.price,
       stock: data.stock,
-      rating:data.rating,
+      rating: data.rating,
       status: 'pending',
       qty: qty > 0 ? qty : 1,
     },

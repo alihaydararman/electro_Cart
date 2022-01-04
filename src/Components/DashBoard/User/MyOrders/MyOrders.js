@@ -8,23 +8,19 @@ const MyOrders = () => {
   const [success, setSuccess] = useState();
 
   const [orders, setOrders] = useState([]);
- 
 
   useEffect(() => {
-    fetch(
-      `http://localhost:9000/order/${user.email}`
-    )
+    fetch(`https://intense-plateau-36885.herokuapp.com/order/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
       });
   }, [user]);
-  console.log(orders)
+  console.log(orders);
   const removeOrderHandler = (id) => {
-    
     const proceed = window.confirm('Are you sure you want to delete?');
     if (proceed === true) {
-      const url = `http://localhost:9000/order/${id}`;
+      const url = `https://intense-plateau-36885.herokuapp.com/order/${id}`;
       fetch(url, {
         method: 'DELETE',
       })

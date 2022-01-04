@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
-import {  useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import {addToCart} from '../../redux/actions/cartAction'
+import { addToCart } from '../../redux/actions/cartAction';
 import Footer from '../Home/Footer/Footer';
 import Header from '../Shared/Header/Header';
 
@@ -11,11 +11,11 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
 
   const { id } = useParams();
-  console.log(id)
+  console.log(id);
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:9000/products/${id}`)
+    fetch(`https://intense-plateau-36885.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [id]);
@@ -23,10 +23,9 @@ const ProductDetails = () => {
 
   const { name, img, stock, price, rating, description } = product;
 
-    const addToCartHandler = () => {
+  const addToCartHandler = () => {
     dispatch(addToCart(product._id, quantity));
-      
-    };
+  };
   return (
     <>
       <Header />
@@ -107,7 +106,7 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

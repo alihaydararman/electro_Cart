@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {  Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert } from 'react-bootstrap';
 import useAuth from '../../../../Hooks/useAuth';
 
 const AddReview = () => {
@@ -17,12 +17,12 @@ const AddReview = () => {
 
   const handleRating = (e) => {
     const userdata = { name: `${user.displayName}`, email: `${user.email}` };
- 
+
     const ratingInfo = ratingData;
     ratingInfo.users = userdata;
     ratingInfo.img = ratingInfo.img ? ratingInfo.img : user.photoURL;
     console.log(ratingInfo);
-    fetch('http://localhost:9000/reviews', {
+    fetch('https://intense-plateau-36885.herokuapp.com/reviews', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(ratingInfo),

@@ -10,7 +10,7 @@ const AddService = () => {
   const { register, handleSubmit, reset } = useForm();
   const [success, setSuccess] = useState();
   const onSubmit = (data) => {
-    fetch('http://localhost:9000/products', {
+    fetch('https://intense-plateau-36885.herokuapp.com/products', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -65,9 +65,7 @@ const AddService = () => {
                 </label>
                 <input required placeholder='Image Url' {...register('img')} />
               </div>
-              <div className='w-100 '>
-               
-              </div>
+              <div className='w-100 '></div>
               <div className='w-100 '>
                 <label htmlFor='image' className='mb-2'>
                   Stock quantity

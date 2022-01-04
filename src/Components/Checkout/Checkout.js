@@ -31,7 +31,7 @@ const Checkout = () => {
   const onSubmit = (data) => {
     console.log(data);
     const order = { ...data, status: 'pending', order: [...cartItems] };
-    fetch('http://localhost:9000/orders', {
+    fetch('https://intense-plateau-36885.herokuapp.com/orders', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
