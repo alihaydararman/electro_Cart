@@ -25,11 +25,6 @@ const Dashboard = () => {
           <div className='line2'></div>
           <div className='line3'></div>
         </button>
-        <Link to='/home'>
-         
-        </Link>
-
-        {user.displayName && <h6>{user.displayName}</h6>}
       </div>
       <div className='wrapper'>
         <div
@@ -39,15 +34,37 @@ const Dashboard = () => {
               : 'sidebar-wrapper px-2'
           }
         >
-          <Link to='/home'>
-            
-          </Link>
           <div className='d-flex flex-column px-2 position-relative'>
             <CloseButton
               onClick={() => setMenuState(false)}
               className=' position-absolute top-0 end-0 m-3 p-2 bg-white close-btn'
             />
-            <Link to='/home' className='mt-5 text-secondary'>
+            <div className=' mt-4 text-center'>
+              {user.photoURL ? (
+                <img
+                  src={user.photoURL}
+                  alt=''
+                  className=' mt-4 rounded-circle'
+                  style={{ width: '60px', height: '60px' }}
+                />
+              ) : (
+                <div
+                  className='mt-3 bg-dark d-flex align-items-center justify-content-center rounded-circle mx-auto'
+                  style={{ width: '50px', height: '50px' }}
+                >
+                  {' '}
+                  <i
+                    className='fas fa-user text-white'
+                    style={{ fontSize: '25px' }}
+                  ></i>
+                </div>
+              )}
+              {user.displayName && (
+                <h6 className='text-white mt-2'>{user.displayName}</h6>
+              )}
+            </div>
+            <hr className='text-white-50' />
+            <Link to='/home' className='mt-3 text-secondary'>
               <span>
                 <i className='fas fa-home me-2 f'></i>
               </span>
@@ -89,7 +106,6 @@ const Dashboard = () => {
 
             {admin && (
               <>
-          
                 <NavLink
                   to='/dashboard/addproduct'
                   className={({ isActive }) =>
