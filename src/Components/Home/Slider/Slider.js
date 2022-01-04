@@ -9,7 +9,7 @@ const Slider = () => {
   return (
     <div className='mx-auto'>
       <Carousel  className='carousel'>
-        <Carousel.Item>
+        <Carousel.Item >
           <img
             className='d-block w-100'
             src={slider1}

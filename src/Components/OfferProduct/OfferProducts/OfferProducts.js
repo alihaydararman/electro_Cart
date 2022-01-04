@@ -34,17 +34,12 @@ const OfferProducts = () => {
       </div>
 
       <div className='pbody'>
-        <div class='container mx-auto mt-4'>
-         
-              <Row sm={1} md={2} lg={3} className='g-4 mt-4'>
-                {products.slice(0, 6).map((product) => (
-                  <OfferProduct
-                    key={product.id}
-                    product={product}
-                  ></OfferProduct>
-                ))}
-              </Row>
-         
+        <div className='container mx-auto mt-4'>
+          <Row sm={1} md={2} lg={3} className='g-4 mt-4'>
+            {products.slice(0, 6).map((product) => (
+              <OfferProduct key={product.id} product={product}></OfferProduct>
+            ))}
+          </Row>
         </div>
       </div>
 

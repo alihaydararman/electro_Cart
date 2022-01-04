@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CloseButton } from 'react-bootstrap';
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import './Dashboard.css';
@@ -10,10 +10,6 @@ const Dashboard = () => {
   const [menustate, setMenuState] = useState(false);
   const { user,LogOUt, admin } = useAuth();
 
-  const navigate = useNavigate();
-//   const signOut = () => {
-//     logout(navigate);
-//   };
   return (
     <div className='container-fluid' style={{ background: '#F4F7FC' }}>
       <div className='dashboard-header py-3 px-4 d-flex justify-content-between align-items-center'>
@@ -49,13 +45,13 @@ const Dashboard = () => {
                 />
               ) : (
                 <div
-                  className='mt-3 bg-dark d-flex align-items-center justify-content-center rounded-circle mx-auto'
-                  style={{ width: '50px', height: '50px' }}
+                  className='mt-3 bg-white d-flex align-items-center justify-content-center rounded-circle mx-auto'
+                  style={{ width: '60px', height: '60px' }}
                 >
                   {' '}
                   <i
-                    className='fas fa-user text-white'
-                    style={{ fontSize: '25px' }}
+                    className='fas fa-user text-dark'
+                    style={{ fontSize: '30px' }}
                   ></i>
                 </div>
               )}

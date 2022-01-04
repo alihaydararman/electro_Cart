@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 
 // import Swiper core and required modules
 import SwiperCore, { Pagination } from 'swiper';
-import './Review.css'
+import './Review.css';
 import Rating from 'react-rating';
 // install Swiper modules
 SwiperCore.use([Pagination]);
@@ -57,8 +57,10 @@ const Review = () => {
           >
             <div className=''>
               <div className=''>
-                <i class='fas fa-quote-left fs-4 opacity-75'></i>
-                <p className='text-secondary'>{review.Feedback.slice(0, 120)}"</p>
+                <i className='fas fa-quote-left fs-4 opacity-75'></i>
+                <p className='text-secondary'>
+                  {review.Feedback.slice(0, 120)}"
+                </p>
               </div>
 
               <div className=''>
